@@ -1,0 +1,15 @@
+#input-area{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#output-area{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+html{
+    max-width: 1024px;
+    margin-right: auto;
+    margin-left: auto;
+}
