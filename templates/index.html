@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
 <link rel="stylesheet" href="../static/index.css">
 <script src="../static/plotly.js"></script>
+<script src="../static/bootstrap/js/bootstrap.js"></script>
 <body>
 
     <div id="output-area" class="container-fluid mt-5">
@@ -21,15 +22,63 @@
 
     <div id="input-area" class="container-fluid">
         <form method = "post" id="expr">
-            <div class="row">
-                <div class="col-1"></div>
+            <div class="row mt-3">
                 <div class="col-10">
-                    <input id="expr-input" name = "expr" type="text" placeholder="Input your expression here..." class="form-control mt-3" autocomplete="off" required>
+                    <input id="expr-input" name = "expr" type="text" placeholder="Input your expression here..." class="form-control" autocomplete="off" required>
                 </div> <!-- 输入文本框  -->
 
-                <input id = "submit" type="submit" name="submit" value="submit the expression">  <!-- 提交按钮 -->
+                <div class="col-1">
+                    <button id="expr-submit" type="submit" name="submit" value="submit the expression" class="btn btn-primary">Draw!</button>
+                </div><!-- 提交按钮 -->
+
+                <div class="col-1">
+                    <a class="btn btn-info" data-bs-toggle="collapse" href="#input-examples" role="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-info-circle mb-1" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+                            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+                        </svg>
+                    </a>
+
                 </div>
+            </div>
         </form>
+
+        <div class="collapse" id="input-examples">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Example Functions</th>
+                    <th scope="col">How to Input</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>5x<sup>2</sup>+3</td>
+                    <td>5*x^2+3</td>
+                </tr>
+                <tr>
+                    <td>e<sup>x</sup></td>
+                    <td>e^x</td>
+                </tr>
+                <tr>
+                    <td>2&pi;x</td>
+                    <td>2*&pi;*x</td>
+                </tr>
+                <tr>
+                    <td>log<sub>10</sub>x</td>
+                    <td>log(x,10)</td>
+                </tr>
+                <tr>
+                    <td>&radic;x</td>
+                    <td>sqrt(x)</td>
+                </tr>
+                <tr>
+                    <td>sin x</td>
+                    <td>sin(x)</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
 </body>
